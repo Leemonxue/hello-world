@@ -1,0 +1,101 @@
+////顺序表
+//#include<iostream>
+//using namespace std;
+//#define n 20//创建一个长度为20的线性表
+//int main()
+//{
+//	int a[n];//用来表示当前调换位置的变量
+//	int i,j;//一个辅助调换的变量
+//	int temp;
+//	cout<<"逆序前为：";//假定初始化一个线性表
+//	for(i=0;i<n;i++)
+//	{
+//		a[i]=i;
+//		cout<<a[i]<<" ";
+//	}
+//	cout<<endl;
+//	i=0;
+//	j=n-1;//对调的终止条件为j比i大1(发生在偶数个元素的时候)或者j比i大2(发生在奇数个元素的时候)
+//	while(1)
+//	{
+//		temp=a[i];
+//		a[i]=a[j];
+//		a[j]=temp;
+//		if(j-i==1||j-i==2||j-i<=0)
+//		{
+//			break;
+//		}
+//		i++;
+//		j--;
+//	}
+//	cout<<"逆序后为：";
+//	for(i=0;i<n;i++)
+//	{
+//		cout<<a[i]<<" ";
+//	}
+//	return 0;
+//}
+
+////单链表
+//#include<iostream>  
+//using namespace std;  
+//const int n=10;  
+//typedef int DataType;//类型定义  
+//typedef struct node
+//{   
+//      DataType data;  
+//      struct node* next;  
+//}
+//LinkedNode,*LinkList;  
+//LinkList CreateList(DataType a[n])//创建单链表  
+//{  
+//    LinkedNode* Head=new LinkedNode(); //初始化一个空链表 
+//    Head->data=a[0];  
+//    Head->next=NULL;  
+//    for(int i=n-1;i>=1;i--)  
+//    {  
+//        LinkedNode* p=new LinkedNode();  
+//        p->data=a[i];  
+//        p->next=Head->next;  
+//        Head->next=p;  
+//    }  
+//    return Head;  
+//}  
+//void PrintList(LinkList Head)//输出单链表 
+//{  
+//    if(NULL==Head)cout<<"The List is empty!"<<endl;  
+//    else  
+//    {  
+//        LinkedNode* p=Head;  
+//        while(p!=NULL)  
+//        {  
+//            cout<<p->data<<" ";  
+//            p=p->next;  
+//        }  
+//        cout<<endl;  
+//    }  
+//}  
+//void ReverseList(LinkedNode* q,LinkList& Head)//Reverse函数实现链表的逆置
+//{  
+//    if( (NULL==q)||(NULL==q->next) )  
+//    {  
+//        Head=q;  
+//    }  
+//    else  
+//    {  
+//        LinkedNode* pNext=q->next;  
+//        ReverseList(pNext,Head); //递归逆置后继结点  
+//        pNext->next=q;            //将后继结点指向当前结点。  
+//        q->next=NULL;  
+//    }  
+//}  
+//int main()  
+//{  
+//    int a[n]={1,2,3,4,5,6,7,8,9,10};   
+//    LinkedNode* list=CreateList(a);  
+//    PrintList(list);  
+//    LinkedNode*pTemp=list;  
+//    ReverseList(pTemp,list);  
+//    PrintList(list);  
+//    return 0;  
+//}
